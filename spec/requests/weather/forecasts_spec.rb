@@ -59,6 +59,7 @@ RSpec.describe "Weather Forecasts API", type: :request do
       expect(response).to have_http_status(:ok)
       json = JSON.parse(response.body)
 
+      expect(json["message"]).to eq("Weather data retrieved successfully")
       expect(json["zip"]).to eq("500081")
       expect(json["from_cache"]).to eq(false)
       expect(json["temperature"]).to eq(32.5)

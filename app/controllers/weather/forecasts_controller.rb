@@ -17,6 +17,7 @@ module Weather
 
       # Extract and send only the relevant parts of the API response
       render json: {
+        message: "Weather data retrieved successfully",
         zip: location.zip,
         from_cache: from_cache, # Helps identify if response was served fast via cache
         temperature: weather_data["main"]["temp"],
