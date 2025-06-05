@@ -70,6 +70,7 @@ rails server
 
 ```json
 {
+  "message": "Weather data retrieved successfully",
   "zip": "500081",
   "from_cache": false,
   "temperature": 32.5,
